@@ -1,50 +1,116 @@
-# 💀 DoomScroller - Suite de Widgets para Rainmeter (PC)
+# 💀 DoomScroller - Suite de Widgets para Rainmeter (Windows PC)
 
-Suite de widgets minimalistas de alto rendimiento para Windows PC con estética **Dark Glassmorphic**, consumo ultra-bajo (< 0.1% CPU / RAM) y actualización en vivo.
+[![Rainmeter Compatible](https://img.shields.io/badge/Rainmeter-4.5%2B-7C3AED?style=for-the-badge&logo=windows&logoColor=white)](https://www.rainmeter.net/)
+[![Design: Dark Glass](https://img.shields.io/badge/Design-Dark%20Glassmorphic-38BDF8?style=for-the-badge)](https://obsidian.md/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)](LICENSE)
+
+> **Suite minimalista de alto rendimiento para Windows PC con estética Dark Glassmorphic, acentos Neón Purple / RGB Chroma y consumo de recursos ultra-bajo (< 0.1% CPU / RAM).**
 
 ---
 
-## 🌟 Widgets Incluidos en la Suite
+## 🌟 Módulos y Widgets Incluidos (10 Módulos)
 
-### 1. 🌤️ **Clima Caracas (`Weather\DoomScrollerWeather.ini`)**
-- **Meteorología en Vivo de Caracas, Venezuela**: Integración directa con la API de Open-Meteo para las coordenadas exactas de Caracas (10.48°N, -66.90°W).
+### 1. 🌤️ Clima Open-Meteo (`Weather/DoomScrollerWeather.ini`)
+- **Meteorología en Vivo**: Integración sin API Keys con **Open-Meteo API** (Coordenadas predeterminadas de Caracas: `10.48°N, -66.90°W`, totalmente personalizable).
 - **Pronóstico de Hoy y Mañana**:
-  - **Hoy**: Temperatura actual en vivo, sensación térmica, viento (km/h), humedad, condición del clima y rango Máx/Mín.
-  - **Mañana**: Pronóstico de 24 horas, rango térmico y barra gráfica animada de probabilidad de lluvia.
-- **Estética Neon Purple**: Cristal oscuro con detalles en morado neón y dorado de alta legibilidad sin errores de codificación.
+  - **Hoy**: Temperatura actual, sensación térmica, velocidad del viento (km/h), humedad %, condición meteorológica y rango Máx/Mín.
+  - **Mañana**: Pronóstico de 24 horas, rango térmico y probabilidad visual de lluvia %.
+- **Modo Offline**: Respaldo automático si la conexión a internet falla.
 
-### 2. 🌙 **Fase Lunar (`Moon\DoomScrollerMoon.ini`)**
-- **Esfera Lunar Dinámica**: Cálculo astronómico de precisión en tiempo real de la fase lunar actual (Luna Llena, Creciente, Menguante, etc.).
-- **Esfera Interactiva**: Esfera gráfica central que ajusta dinámicamente su iluminación y núcleo visual en porcentaje exacto (%).
-- **Próxima Fase**: Cuenta regresiva de días para el próximo cambio de fase principal.
+### 2. 🌙 Fase Lunar Astronómica (`Moon/DoomScrollerMoon.ini`)
+- **Esfera Lunar Dinámica**: Cálculo astronómico de precisión en tiempo real de la fase lunar actual (Luna Nueva, Creciente, Llena, Menguante).
+- **Iluminación %**: Iluminación gráfica central ajustada dinámicamente.
+- **Próximo Hito**: Cuenta regresiva en días hacia el próximo cambio de fase principal.
 
-### 3. 🧬 **Reloj Circadiano en Vivo (`Circadian\DoomScrollerCircadian.ini`)**
-- **Biometría en Tiempo Real**: Rastreo dinámico de las 6 hormonas y métricas circadianas principales (Cortisol, Melatonina, Presión de Sueño, Hormona de Crecimiento, Temperatura Corporal y Sensibilidad a la Insulina).
-- **Fase del Día Actual**: Indica la fase biológica activa (ej. *Pico de Testosterona*, *Ventana Proteica*, *Melatonina en Asenso*) y temporizador para el próximo hito.
+### 3. 🧬 Reloj Circadiano Biométrico (`Circadian/DoomScrollerCircadian.ini`)
+- **Rastreo Biológico**: Seguimiento de 6 métricas y hormonas circadianas principales (Cortisol, Melatonina, Presión de Sueño, Hormona de Crecimiento, Temperatura Corporal y Sensibilidad a la Insulina).
+- **Ventana Biológica Activa**: Notifica el estado actual del cuerpo (ej. *Pico de Testosterona*, *Ventana Proteica*, *Ascenso de Melatonina*).
 
-### 4. ⏳ **Memento Mori (`Memento\DoomScrollerMemento.ini`)**
-- **Conciencia del Tiempo**: Muestra días vividos, semanas transcurridas, semana actual del año (1-52) y barra de progreso de vida basada en expectativa configurable.
+### 4. ⏳ Memento Mori (`Memento/DoomScrollerMemento.ini`)
+- **Conciencia del Tiempo**: Muestra días vividos, semanas transcurridas, número de semana del año (1-52) y barra de progreso de expectativa de vida configurable.
 
-### 5. ✅ **Habit Flow (`Habits\DoomScrollerHabits.ini`)**
-- **Rastreador de Hábitos**: Panel interactivo con switches visuales para marcar tus objetivos y hábitos diarios directamente en el escritorio.
+### 5. ✅ Habit Flow (`Habits/DoomScrollerHabits.ini`)
+- **Rastreador de Hábitos en Escritorio**: Panel interactivo con interruptores visuales para marcar tus objetivos diarios (*Meditar*, *Leer*, *Tomar Sol*, *Ejercicio*, *Crear*) directamente desde el escritorio.
 
-### 6. 🎵 **Audio Visualizer (`Visualizer\DoomScrollerAudioPlayer.ini`)**
-- **Visualizador de Audio RGB**: Espectro de ondas sonoras reactivo a la música o sonido de tu PC con modos RGB Chroma.
+### 6. 🎵 Audio Visualizer RGB (`Visualizer/DoomScrollerAudioPlayer.ini`)
+- **Espectro Reactivo**: Espectro de ondas de audio en tiempo real reactivo al sonido de tu PC con soporte para **Modo RGB Chroma**.
+
+### 7. 📅 Mini Calendario (`Calendar/DoomScrollerCalendar.ini`)
+- **Matriz Mensual Interactiva**: Visualizador de fecha en vivo con matriz completa de días del mes, número de semana y botones de navegación (`◄`, `►` y `[HOY]`).
+
+### 8. 🍅 Temporizador Pomodoro (`Pomodoro/DoomScrollerPomodoro.ini`)
+- **Enfoque & Descanso**: Temporizador Pomodoro de escritorio para ciclos de trabajo de 25m y descansos de 5m.
+
+### 9. 🌍 Reloj UTC (`UTC/DoomScrollerUTC.ini`)
+- **Huso Horario Global**: Muestra la hora en tiempo real en UTC/GMT para desarrolladores y trabajo remoto.
+
+### 10. 👟 Steps Sync (`Steps/DoomScrollerSteps.ini` + `steps_server.py`)
+- **Contador de Pasos**: Integración con servidor ligero en Python (`steps_server.py`) para recibir la cuenta de pasos diarios, distancia recorrida en km y calorías estimadas.
 
 ---
 
-## 🚀 Instalación y Carga en Rainmeter
+## 🚀 Guía de Instalación Paso a Paso
 
-1. Los archivos se encuentran sincronizados automáticamente en la carpeta de skins de Rainmeter:
-   `C:\Users\<TuUsuario>\Documents\Rainmeter\Skins\widget doomscroller`
-2. Abre la ventana principal de **Rainmeter**.
-3. Haz clic en **Refrescar todo** (*Refresh all*).
-4. Despliega la carpeta `widget doomscroller`.
-5. Selecciona el widget que deseas activar (`Weather`, `Moon`, `Circadian`, `Memento`, `Habits` o `Visualizer`) y haz clic en **Cargar** (*Load*).
+### 1. Requisitos Previos
+* Descarga e instala **Rainmeter 4.5** o superior desde [Rainmeter.net](https://www.rainmeter.net/).
+
+### 2. Copiar la Skin a Rainmeter
+1. Clona o descarga este repositorio:
+   ```bash
+   git clone https://github.com/Nelxson2099/widgets-doomscroller.git
+   ```
+2. Copia la carpeta descargada a la ruta de skins de Rainmeter:
+   ```text
+   C:\Users\<TuUsuario>\Documents\Rainmeter\Skins\widget doomscroller
+   ```
+
+### 3. Activar los Widgets
+1. Abre la ventana de administración de **Rainmeter** desde la bandeja del sistema.
+2. Haz clic en **Refrescar todo** (*Refresh all*).
+3. Despliega la carpeta **`widget doomscroller`**.
+4. Entra en el módulo que desees (ej: `Weather`, `Moon`, `Habits`, `Circadian`) y presiona el botón **Cargar** (*Load*).
 
 ---
 
-## ⚙️ Personalización y Configuración
+## ⚙️ Personalización & Ajustes
 
-- **Configuración Global**: Abre `@Resources\Variables.inc` para cambiar la fecha de nacimiento (`BirthDate`), modo RGB (`RgbMode`), o la paleta de colores base.
-- **Menú Contextual**: Haz clic derecho sobre cualquier widget para acceder a acciones rápidas como refrescar el clima, activar modo RGB o ajustar valores.
+### Configuración Global (`@Resources/Variables.inc`)
+Edita el archivo `@Resources/Variables.inc` con un editor de texto (Notepad, VS Code) para personalizar la suite:
+
+```ini
+[Variables]
+; Fecha de Nacimiento para Memento Mori (YYYY-MM-DD)
+BirthDate=2000-01-01
+TargetAge=80
+
+; Modo RGB Chroma (0 = Estático, 1 = Modo Arcoíris Dinámico)
+RgbMode=0
+
+; Color Accent Principal (R,G,B,A)
+ColorAccent=255,160,0,255
+ColorAccentGlow=255,160,0,40
+```
+
+### Configuración del Servidor de Pasos (`steps_server.py`)
+Para sincronizar pasos vía HTTP POST desde tu teléfono o script local:
+```bash
+python @Resources/steps_server.py
+```
+El servidor escuchará en `http://localhost:8088/api/steps`.
+
+---
+
+## ⚡ Rendimiento & Bajo Consumo
+
+* **Uso de CPU:** < 0.1% en reposo.
+* **Consumo RAM:** < 15 MB por la suite completa.
+* **Sin Lag:** Optimizado para no interferir en videojuegos ni tareas intensivas de renderizado.
+
+---
+
+## 📄 Licencia & Créditos
+
+Este proyecto está bajo la Licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
+
+Desarrollado con ❤️ por **[Nelxson2099](https://github.com/Nelxson2099)** & **Antigravity AI**.  
+*Dedicado a la comunidad de Rainmeter, la estética Glassmorphic y el biohacking.*

@@ -53,14 +53,39 @@ function updateCalculations()
     if lifePct > 100 then lifePct = 100 end
     if lifePct < 0 then lifePct = 0 end
     
+    -- Horas restantes para el año 2100 (2100-01-01 00:00:00)
+    local target2100Table = {
+        year = 2100,
+        month = 1,
+        day = 1,
+        hour = 0,
+        min = 0,
+        sec = 0
+    }
+    local target2100TimeStamp = os.time(target2100Table)
+    local diff2100Seconds = os.difftime(target2100TimeStamp, now)
+    if diff2100Seconds < 0 then diff2100Seconds = 0 end
+    local hoursTo2100 = math.floor(diff2100Seconds / 3600)
+    
+    -- Día del año y total de días del año
+    local dateTable = os.date("*t", now)
+    local currentYear = dateTable.year
+    local dayOfYear = dateTable.yday
+    local isLeap = (currentYear % 4 == 0 and currentYear % 100 ~= 0) or (currentYear % 400 == 0)
+    local totalDaysInYear = isLeap and 366 or 365
+    
     -- Formatear números con comas (ej. 9,542)
     local daysFormatted = formatNumber(daysLived)
     local weeksFormatted = formatNumber(weeksLived)
+    local hours2100Formatted = formatNumber(hoursTo2100)
     local pctFormatted = string.format("%.1f%%", lifePct)
     local rawPct = string.format("%.4f", lifePct / 100)
 
     SKIN:Bang('!SetVariable', 'DaysLivedFormatted', daysFormatted)
     SKIN:Bang('!SetVariable', 'WeeksLivedFormatted', weeksFormatted)
+    SKIN:Bang('!SetVariable', 'HoursTo2100Formatted', hours2100Formatted)
+    SKIN:Bang('!SetVariable', 'DayOfYear', tostring(dayOfYear))
+    SKIN:Bang('!SetVariable', 'TotalDaysInYear', tostring(totalDaysInYear))
     SKIN:Bang('!SetVariable', 'LifePctFormatted', pctFormatted)
     SKIN:Bang('!SetVariable', 'LifePctRaw', rawPct)
 end

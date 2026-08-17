@@ -1,0 +1,14 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+*.log
+ehthumbs.db
+
+# Rainmeter local backups & temp files
+graphify-out/
+__pycache__/
+*.tmp
+*.bak
+.env
+.vscode/
+.idea/

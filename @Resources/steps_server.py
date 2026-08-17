@@ -34,7 +34,8 @@ class StepRequestHandler(http.server.BaseHTTPRequestHandler):
                     json.dump(steps_data, f, indent=2)
                 
                 # Copy to Rainmeter skins dir
-                target_json = r"C:\Users\Nelson\Documents\Rainmeter\Skins\widget doomscroller\@Resources\steps.json"
+                home_dir = os.path.expanduser("~")
+                target_json = os.path.join(home_dir, "Documents", "Rainmeter", "Skins", "widget doomscroller", "@Resources", "steps.json")
                 with open(target_json, "w", encoding="utf-8") as f:
                     json.dump(steps_data, f, indent=2)
                 
